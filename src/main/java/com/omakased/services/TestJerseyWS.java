@@ -1,4 +1,4 @@
-package com.restinder.services;
+package com.omakased.services;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;

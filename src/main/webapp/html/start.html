@@ -2,14 +2,28 @@
 		<div class="intro">
 			<div class="start">Hello, would you find food options ? </div>
 			<h1>just slide and find your favorite food close you.</h1>
-			<div class="start">Start with Restinder</div>
+			<div class="row">
+				<div class="col-sm-6 col-sm-offset-3">
+					<form id="contact-form" role="form" ng-submit="sendEmail(user.email)">
+						<div class="ajax-hidden">
+							<div class="form-group wow fadeInUp">
+								<input type="email" ng-model="user.email"  id="c_name" class="form-control" name="c_name" placeholder="put your email here and subscribe">
+							</div>
+							<button type="submit" class="btn btn-lg btn-block wow fadeInUp"   data-wow-delay=".3s">Subscribe</button>
+						</div>
+					</form>
+				</div>
+			</div>
+			<!-- Susbcribe here:<div class="input-group"> <input type="text" id="s_email" class="form-control" name="c_name" placeholder="email"></div>
+			</div> -->
+			
 		</div>
 		
 		
-        <div ng-click="goToSection(1);">
+       <!--  <div ng-click="goToSection(1);">
 		<div class="scroll-down">
             <span>
                 <i class="fa fa-angle-down fa-2x"></i>
             </span>
 		</div>
-        </div>
+        </div> -->

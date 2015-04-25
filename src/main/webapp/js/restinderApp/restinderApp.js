@@ -7,6 +7,8 @@ restinderApp.controller("restinderCtrl",function ($scope , $http , $location, $a
 						'img/houseSamples/house3.jpg'],text:['house1','house2','house3']}
 
 	};
+	$scope.user = {email:""
+	};
     $scope.dataHouses = {"address":{
                         "city":"New York",
                         "state":"New York",
@@ -16,7 +18,14 @@ restinderApp.controller("restinderCtrl",function ($scope , $http , $location, $a
         };
     
    
-    
+    $scope.sendEmail= function (email){
+    	console.log(email);
+//    	$http.get('http://omakased.com/services'+"&eamil="+email).
+//        success(function(data) {
+//            $scope.greeting = data;
+//        });
+//    	
+    }
     
 	$scope.statusList=["main","foodView"];
 	$scope.status ="main";
@@ -52,7 +61,10 @@ restinderApp.controller("restinderCtrl",function ($scope , $http , $location, $a
         }
 	 };
 
-	 
+	$scope.prev = function(){
+		console.log("put don't like!!!!");
+	};
+	
 	 $scope.returnSrcHouse = function (){
 	 	var urlHouse="";
 	 	if(defaulIndex < listHouses.length){
