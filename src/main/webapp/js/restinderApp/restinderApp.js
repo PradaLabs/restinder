@@ -2,7 +2,7 @@ var restinderApp = angular.module("restinderApp", ['ui.bootstrap']);
 
 
 restinderApp.controller("restinderCtrl",function ($scope , $http , $location, $anchorScroll) {
-		$scope.house={slides :{image:['img/houseSamples/house1.jpg',
+	$scope.house={slides :{image:['img/houseSamples/house1.jpg',
 						'img/houseSamples/house2.jpg',
 						'img/houseSamples/house3.jpg'],text:['house1','house2','house3']}
 
@@ -16,11 +16,9 @@ restinderApp.controller("restinderCtrl",function ($scope , $http , $location, $a
         };
     
    
-    $scope.goToSection= function(id){
-        $location.hash(id);
-        $anchorScroll();
-    };
-	$scope.statusList=["main","houseView"];
+    
+    
+	$scope.statusList=["main","foodView"];
 	$scope.status ="main";
 	$scope.indexPage=0;
 
@@ -28,6 +26,12 @@ restinderApp.controller("restinderCtrl",function ($scope , $http , $location, $a
 	$scope.openHouse=false;
 
 	$scope.defaulIndex=0;
+	
+	$scope.goToSection= function(id){
+    	console.log("tic");
+    	$scope.status= $scope.statusList[id];
+    	console.log($scope.status);
+	}
 	$scope.tindHouseModel={zipCode:'',
 							minPrice:'',
 							maxPrice:'',

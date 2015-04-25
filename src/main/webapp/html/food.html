@@ -1,0 +1,30 @@
+<div class="content-main">aasdsd
+        <div class="row">
+            <div class="col-md-9 col-md-offset-1">
+                <div class="thumbnail" >
+                    <carousel >
+                      <slide ng-model ="value.slides" ng-repeat="slide in value.slides" active="slide.active">
+                        <img ng-src="{{slide.image}}" style="margin:auto;">
+                        <div class="carousel-caption">
+                          <p>{{dataHouses.address.zip}} , {{dataHouses.address.city}} - {{dataHouses.address.address}},{{dataHouses.address.state}}  </p>
+                        </div>
+                      </slide>
+                    </carousel>
+                </div> 
+            </div>
+       
+        <div class="row">
+            <div ng-model="dataHouses.address"class="col-lg-8 col-lg-offset-1 text-center">
+                <h4>about this house</h2>
+                <p>{{dataHouses.address.zip}} , {{dataHouses.address.city}} - {{dataHouses.address.address}},{{dataHouses.address.state}}  </p>
+            </div>
+        </div>
+        <div class="row">
+            <div>
+
+            </div>
+            <div>
+            </div>
+        </div>
+    </div>
+</div>

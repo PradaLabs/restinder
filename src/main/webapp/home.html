@@ -9,7 +9,8 @@
 	<title>Clean - One Page Personal Portfolio</title>
 
 	<!-- CSS -->
-	<link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+	<!-- <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen"> -->
+	<link href="css/bootstrap.css" rel="stylesheet" media="screen"> 
 	<link href="assets/css/font-awesome.min.css" rel="stylesheet" media="screen">
 	<link href="assets/css/simple-line-icons.css" rel="stylesheet" media="screen">
 	<link href="assets/css/animate.css" rel="stylesheet">
@@ -29,9 +30,16 @@
 	</div>
 
 	<!-- Home start -->
+	 <div ng-switch="status">
+        <div ng-switch-when="main">
+            <section id="home" class="pfblock-image screen-height" ng-include="'html/start.html'"></section>
+        </div>
+        <div ng-switch-when="foodView" >
+           <section id="service" class="pfblock-image screen-height" ng-include="'html/food.html'"></section>
+        </div>
+     </div>
 	
-	<section id="home" class="pfblock-image screen-height" ng-include="'html/home.html'">
-	</section>
+	
 
 	<!-- Home end -->
 
